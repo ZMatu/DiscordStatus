@@ -18,7 +18,7 @@ namespace DiscordStatus
             {
                 if (IsGlobalCooldownActive())
                 {
-                    DSLog.LogToChat(player, "{RED}Command is on global cooldown. Please wait.");
+                    DSLog.LogToChat(player, "{RED}Este comando esta en cooldown. Espera pacientemente.");
                     return;
                 }
                 await _webhook.RequestPlayers(player.PlayerName);
