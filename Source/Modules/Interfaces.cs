@@ -15,9 +15,9 @@ namespace DiscordStatus
 
         Task RequestPlayers(string name);
 
-        Task GameEnd(PlayerInfo mvp, string steamlink);
+        Task GameEnd(string mvp);
 
-        Task NewMap(string mapname);
+        Task NewMap(string mapname, int playercounts);
     }
 
     public interface IQuery
@@ -31,6 +31,8 @@ namespace DiscordStatus
 
     public interface IChores
     {
+        void InitPlayers(CCSPlayerController player);
+
         bool IsPlayerValid(CCSPlayerController? player);
 
         bool IsURLValid(string? url);
